@@ -1,0 +1,21 @@
+{
+  "name": "@wiw/preview",
+  "version": "0.1.0-preview.0",
+  "private": true,
+  "description": "Worldwide Identity Web: offline developer preview, not a live identity network",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test",
+    "demo": "node examples/preview.ts",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}

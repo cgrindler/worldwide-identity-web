@@ -1,0 +1,15 @@
+Worldwide Identity Web uses separate licenses by content type:
+
+* Source code, tests, examples, build files and configuration:
+  Apache License, Version 2.0. See LICENSES/Apache-2.0.txt.
+* Documentation, specification text and architecture diagrams:
+  Creative Commons Attribution 4.0 International.
+  See LICENSES/CC-BY-4.0.txt.
+* License texts and third-party material retain their own notices and terms.
+
+Copyright remains with the respective authors and contributors.
+This project does not claim ownership of referenced standards or dependencies.
+
+Neither license provides general permission to imply endorsement or official
+certification. Trademark rights, where they exist, are separate; see
+TRADEMARKS.md. No registered trademark status or patent clearance is asserted.

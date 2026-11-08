@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title description">
+  <title id="title">Worldwide Identity Web: network-first architecture, revision 0.4</title>
+  <desc id="description">Target architecture, not a deployed system. Device-bound membership admits a client to an isolated WireGuard overlay. A separate control plane manages credentials, names and expiring peer leases. Native wiw services authorize requests end-to-end. An isolated, disabled-by-default transition gateway separates external internet traffic. The current repository only implements syntax validation and explicit denial stubs.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#355b78"/>
+    </marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#b45309"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #18344b; }
+      .title { font-size: 32px; font-weight: 700; fill: white; }
+      .subtitle { font-size: 17px; fill: #c9ddea; }
+      .section { font-size: 21px; font-weight: 700; }
+      .body { font-size: 17px; }
+      .small { font-size: 15px; }
+      .label { font-size: 15px; font-weight: 700; letter-spacing: 1px; }
+      .white { fill: white; }
+      .muted { fill: #4b6578; }
+      .link { fill: none; stroke: #355b78; stroke-width: 2.5; marker-end: url(#arrow); }
+      .control { fill: none; stroke: #6f5a9e; stroke-width: 2; stroke-dasharray: 6 6; marker-end: url(#arrow); }
+      .gateway-link { fill: none; stroke: #b45309; stroke-width: 2.5; marker-end: url(#orange-arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="#f3f6fa"/>
+  <rect width="1600" height="112" fill="#102c43"/>
+  <text x="32" y="46" class="title">Worldwide Identity Web</text>
+  <text x="32" y="80" class="subtitle">WIW / a separate logical network, not just another login application</text>
+  <rect x="1230" y="28" width="338" height="50" rx="25" fill="#facc66"/>
+  <text x="1399" y="59" text-anchor="middle" class="label">DESIGN 0.4 / OFFLINE PREVIEW</text>
+
+  <text x="32" y="149" class="label">CONTROL PLANE / PROPOSED, NOT IMPLEMENTED</text>
+  <rect x="32" y="165" width="484" height="145" rx="12" fill="#eee9f8" stroke="#9582b8"/>
+  <text x="52" y="197" class="section">Enrollment and membership</text>
+  <text x="52" y="228" class="body">Supported passport / eID + holder verification</text>
+  <text x="52" y="255" class="body">Scoped credential, device key, renewal and recovery</text>
+  <text x="52" y="283" class="small muted">No raw identity documents sent to native services.</text>
+  <rect x="548" y="165" width="484" height="145" rx="12" fill="#eee9f8" stroke="#9582b8"/>
+  <text x="568" y="197" class="section">Admission and authenticated registry</text>
+  <text x="568" y="228" class="body">Bind proof to a peer key; issue expiring leases</text>
+  <text x="568" y="255" class="body">wiw.&lt;domain&gt; -&gt; service key + operator + routes</text>
+  <text x="568" y="283" class="small muted">Revocation, freshness, key rotation; no DNS fallback.</text>
+  <rect x="1064" y="165" width="504" height="145" rx="12" fill="#eee9f8" stroke="#9582b8"/>
+  <text x="1084" y="197" class="section">Federation and governance</text>
+  <text x="1084" y="228" class="body">Issuer/operator trust, appeals and incident response</text>
+  <text x="1084" y="255" class="body">Public infrastructure audit; no personal-data log</text>
+  <text x="1084" y="283" class="small muted">Privacy model, legal review and certification still open.</text>
+  <path d="M274 310V364" class="control"/>
+  <path d="M790 310V364" class="control"/>
+  <path d="M1316 310V364" class="control"/>
+
+  <rect x="20" y="349" width="1560" height="325" rx="16" fill="#eaf4f5" stroke="#3b8188" stroke-width="2"/>
+  <text x="44" y="380" class="label">NATIVE MEMBERSHIP BOUNDARY / EACH SERVICE STILL AUTHORIZES ACCESS</text>
+  <rect x="44" y="405" width="390" height="237" rx="12" fill="white" stroke="#7ea7b8"/>
+  <text x="64" y="441" class="section">Member device</text>
+  <text x="64" y="477" class="body">WIW-aware client / OS network agent</text>
+  <text x="64" y="507" class="body">Proof of possession at login</text>
+  <text x="64" y="537" class="body">Separate trust store and browsing origins</text>
+  <text x="64" y="567" class="body">Never interpret public DNS as WIW trust</text>
+  <text x="64" y="615" class="small muted">Hardware keys reduce, not eliminate, misuse.</text>
+
+  <rect x="532" y="405" width="480" height="237" rx="12" fill="white" stroke="#7ea7b8"/>
+  <text x="552" y="441" class="section">Federated overlay fabric</text>
+  <text x="552" y="477" class="body">Unmodified WireGuard / encrypted peer links</text>
+  <text x="552" y="507" class="body">Service-scoped routing; no default lateral access</text>
+  <text x="552" y="537" class="body">Controller enforces lease expiry and revocation</text>
+  <text x="552" y="567" class="body">Authenticated peers are not trusted applications</text>
+  <text x="552" y="615" class="small muted">No passport verification on every packet.</text>
+
+  <rect x="1110" y="405" width="446" height="237" rx="12" fill="white" stroke="#7ea7b8"/>
+  <text x="1130" y="441" class="section">Native websites and apps</text>
+  <text x="1130" y="477" class="body">wiw.example.com</text>
+  <text x="1130" y="507" class="body">Authenticated service node + application</text>
+  <text x="1130" y="537" class="body">Per-service proof and least-privilege access</text>
+  <text x="1130" y="567" class="body">Existing HTTP stacks behind WIW integration</text>
+  <text x="1130" y="615" class="small muted">No automatic reachability from public browsers.</text>
+  <path d="M434 501H532" class="link"/>
+  <path d="M1012 501H1110" class="link"/>
+  <text x="483" y="484" class="small" text-anchor="middle">tunnel</text>
+  <text x="1061" y="484" class="small" text-anchor="middle">route</text>
+  <text x="44" y="703" class="small">Native sessions: end-to-end TLS / QUIC + service authorization.</text>
+
+  <rect x="32" y="756" width="402" height="214" rx="12" fill="#e9eef5" stroke="#a3b2c2"/>
+  <text x="52" y="792" class="section">What the repository does now</text>
+  <text x="52" y="828" class="body">Validates wiw hostname syntax</text>
+  <text x="52" y="858" class="body">Returns explicit not-implemented errors</text>
+  <text x="52" y="888" class="body">Keeps all network capabilities disabled</text>
+  <text x="52" y="935" class="small muted">No enrollment, registry, tunnel or proxy is live.</text>
+
+  <rect x="506" y="747" width="1062" height="235" rx="16" fill="#fff7e8" stroke="#b45309" stroke-width="2" stroke-dasharray="9 6"/>
+  <text x="532" y="779" class="label">EXPLICIT TRANSITION BOUNDARY / DISABLED IN PREVIEW</text>
+  <rect x="532" y="799" width="480" height="158" rx="10" fill="white" stroke="#c69455"/>
+  <text x="552" y="832" class="section">Isolated egress gateway</text>
+  <text x="552" y="863" class="body">Admitted clients only; bounded destination policy</text>
+  <text x="552" y="891" class="body">Preserve HTTPS; never forward WIW credentials</text>
+  <text x="552" y="929" class="small muted">Outside content remains untrusted, not anonymous.</text>
+  <rect x="1110" y="799" width="434" height="158" rx="10" fill="white" stroke="#c69455"/>
+  <text x="1130" y="832" class="section">Existing internet</text>
+  <text x="1130" y="863" class="body">Ordinary sites and public onboarding</text>
+  <text x="1130" y="891" class="body">Optional public mirrors stay isolated</text>
+  <text x="1130" y="929" class="small muted">No unauthenticated route into native services.</text>
+  <path d="M990 674V727H478V835H532" class="gateway-link"/>
+  <path d="M1012 872H1110" class="gateway-link"/>
+  <text x="1061" y="852" class="small" text-anchor="middle">egress</text>
+
+  <rect x="32" y="1010" width="1536" height="64" rx="10" fill="#dfe7ef"/>
+  <text x="52" y="1037" class="label">UNDERLAY: TODAY'S IP NETWORKS FIRST</text>
+  <text x="52" y="1062" class="body">Existing fiber, mobile and Wi-Fi carry encrypted traffic. Independent peering / links later; no physical independence is claimed.</text>
+  <text x="32" y="1112" class="small">Design limits: verified document != trustworthy person; no global uniqueness, guaranteed anonymity, DDoS immunity or post-quantum claim.</text>
+  <text x="32" y="1143" class="small">IP: Apache-2.0 code / CC-BY-4.0 documentation. Copyright retained; trademark clearance and patent freedom-to-operate are not established.</text>
+  <text x="32" y="1176" class="small muted">Worldwide Identity Web contributors / Architecture 0.4 / Full decisions and open gates: docs/adr/0001-network-first.md</text>
+</svg>

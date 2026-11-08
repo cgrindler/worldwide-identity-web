@@ -1,0 +1,14 @@
+{
+  "profile": "wiw-transition-gateway",
+  "version": "0.1.0-preview",
+  "status": "design-only",
+  "enabled": false,
+  "outbound": "disabled-until-isolated-egress-is-implemented",
+  "inbound": "deny",
+  "publicMirrors": "separate-untrusted-service-opt-in-design",
+  "forwardMemberCredentials": false,
+  "dnsFallbackForWiw": false,
+  "tlsInterception": false,
+  "externalContentTrust": "untrusted",
+  "retirement": "governance-decision-not-a-fixed-date"
+}

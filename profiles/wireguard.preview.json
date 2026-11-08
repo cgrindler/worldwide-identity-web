@@ -1,0 +1,12 @@
+{
+  "profile": "wiw-wireguard",
+  "version": "0.1.0-preview",
+  "status": "design-only",
+  "enabled": false,
+  "dataPlane": "unmodified-wireguard",
+  "peerAdmission": "requires-unimplemented-membership-verifier",
+  "peerLeases": "short-lived-and-revocable-design-pending",
+  "routing": "deny-by-default-service-scoped",
+  "postQuantumKeyManagement": "research-not-implemented",
+  "privateKeys": "never-stored-in-this-profile"
+}

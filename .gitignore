@@ -1,0 +1,13 @@
+node_modules/
+dist/
+target/
+.tools/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.log
+.DS_Store
